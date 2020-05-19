@@ -41,7 +41,7 @@ namespace ATMmachine
 
             int quitOut = 1;
 
-            while (quitOut > 0)
+            while (quitOut != 0)
             {
                 Console.WriteLine("*********Welcome to MWS Banking**************\n\n1. Check Balance\n\n2. Withdraw Cash\n\n3. Deposite Cash\n\n4. Quit\n\n*********************************************");
                 Console.WriteLine("\n\nPlease enter your choice:\n");
@@ -52,7 +52,7 @@ namespace ATMmachine
                     case 1:
                         Console.Clear();
                         Console.WriteLine($"Your balance is: {ledgerBalance}\n\n");
-                        quitOut++;
+                        
                         break;
 
                     case 2:
@@ -61,7 +61,7 @@ namespace ATMmachine
                         withdraw = Convert.ToInt32(Console.ReadLine());
                         ledgerBalance = ledgerBalance - withdraw;
                         Console.WriteLine($"Your new balance is: {ledgerBalance}\n\n");
-                        quitOut++;
+                        
                         break;
 
                     case 3:
@@ -70,7 +70,7 @@ namespace ATMmachine
                         deposit = Convert.ToInt32(Console.ReadLine());
                         ledgerBalance = ledgerBalance + deposit;
                         Console.WriteLine($"Your new balance is: {ledgerBalance}\n\n");
-                        quitOut++;
+                       
                         break;
 
                     case 4:
@@ -82,7 +82,7 @@ namespace ATMmachine
                     default:
                         Console.Clear();
                         Console.WriteLine("Please enter one of the options.\n\n");
-                        quitOut++;
+                        
                         break;
                 }
 
